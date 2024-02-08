@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sargam</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        .left{
+            color:blanchedalmond;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: url('https://images.unsplash.com/photo-1533035353720-f1c6a75cd8ab?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHZlcnklMjBsaWdodCUyMGJhY2tncm91bmQlMjBmb3IlMjBwb3J0Zm9saW98ZW58MHx8MHx8fDA%3D');
+            color :blanchedalmond;
+            font-family: 'Poppins',sans-serif;
+        }
+        .container {
+           position: relative;
+           width: 300px;
+           padding: 20px;
+           background: #fff; /* Container background color */
+           transform: rotateY(45deg) rotateX(45deg);
+           transform-style: preserve-3d;
+           box-shadow: 0 0 50px rgba(0, 0, 0, 0.5); /* Adding a shadow for depth effect */
+        }
+
+        h1, p {
+            margin:0px;
+          }
+
+        .container::before {
+            content:'';
+            position: relative;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background:url('https://images.unsplash.com/photo-1535868463750-c78d9543614f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGRhcmt8ZW58MHx8MHx8fDA%3D');
+            /* height: ;
+            width: ; */
+
+            
+            transform: translateZ(-1px); /* Move the background away for a better 3D effect */
+            border-radius: 10px;
+        }
+
+        nav{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color:rgb(255, 0, 0) ;
+             
+        }
+        nav ul{
+            display: flex;
+            justify-content: center;
+            
+        }
+        nav ul li{  
+            list-style: none;
+            margin: 0 23px;
+        }
+        nav ul li a{
+           text-decoration: none;
+            color :black;
+            
+
+        }
+        nav ul li a:hover{
+           color: white;
+           font-size: 1.06rem;
+        }
+        main hr{
+            border: 0;
+            background-color:black;
+            height: 2px;
+            margin: 20px 84px;
+            
+
+        }
+        .left{
+            font-size: 1.5rem;
+            color:black;
+            
+        }
+        .right{
+            font-size: 1.5rem;
+            color: black;
+        }
+        .firstSection{
+            display: flex;
+            justify-content: space-around;
+            align-items:center;
+           
+            background: url('https://images.unsplash.com/photo-1535868463750-c78d9543614f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGRhcmt8ZW58MHx8MHx8fDA%3D');
+            background-size: cover;
+            height: 750px;
+            width: 100%;
+            background-position: center;
+            position: relative;
+        }
+
+        
+        
+        .firstSection > div{
+            width: 30%;
+            
+        }
+        .leftSection{
+            font-size: 3rem;
+        }
+        .leftSection .btn {
+            padding: 12px 0;
+        }
+        
+        
+        .rightSection img{background: url('https://images.unsplash.com/photo-1527769929977-c341ee9f2033?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGFyayUyMHdhbGxwYXBlciUyMGZvciUyMHBvcnRmb2xpb3xlbnwwfHwwfHx8MA%3D%3D');
+            background-size: cover;
+            background-position: center;
+           
+            width: 80%;
+
+        
+        }
+        .white{
+            color:red ;
+        }
+        .text-grey{
+            color:red;
+        }
+        #element{
+            color:red;
+            
+        }
+        
+        .secondSection{
+            max-width: 80vw;
+            margin: auto;
+            height:80vh;
+            color: black;
+           
+        }
+        .secondSection h1{
+           font-size: 1.9rem;
+        }
+        .secondSection .box{
+            background:black ;
+            width: 80vw;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .secondSection .vertical{
+            height: 93px;
+            width: 1px;
+            background-color: black;
+            margin: 0 100px;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .thirdSection{
+            max-width: 80vw;
+            margin: 0 100px;
+            height:50vh;
+            color: black;
+        }
+        .thirdSection .box{
+            background:black ;
+            width: 80vw;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .thirdSection h1{
+           font-size: 1.9rem;
+        }
+        
+        .fourthSection{
+            max-width: 80vw;
+            margin: auto;
+            height:30vh;
+            color: black;
+        }
+        .fourthSection .box{
+            background:black ;
+            width: 80vw;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .fifthSection{
+            max-width: 80vw;
+            margin: auto;
+            height:80vh;
+            color: black;
+        }
+        .fifthSection .box{
+            background:black ;
+            width: 80vw;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .sixthSection{
+            max-width: 80vw;
+            margin: auto;
+            height:80vh;
+            color: black;
+        }
+        .sixthSection .box{
+            background:black ;
+            width: 80vw;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+       
+        <nav>
+            <strong><div class = "left">Sargam's Portfolio</div></strong>
+            <div class = "right">
+                <ul>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/">About</a></li>
+                  <li><a href="/">Services</a></li>
+                  <li><a href="/">Projects</a></li>
+                  <li><a href="/">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+
+   
+    <main>
+        
+        <section class="firstSection">
+          <div class="leftSection">
+            Hi,My name is <span class ="white">Sargam Narang</span>
+            <div>and I am a passionate </div>
+            <span id="element"></span>
+            <div class="buttons">
+                <button class="btn" style="
+                 background:red;
+    color:white;
+    border:2px solid white;
+    border-radius:3;
+                ">Download Resume</button>
+                <button class="btn" style="
+                 background:red;
+    color:white;
+    border:2px solid white;
+    border-radius:3;
+                ">Visit Github</button>
+            </div>
+          </div>
+          <div class="rightSection">
+            
+
+          </div>
+         
+          
+
+        </section>
+       
+        <section class="thirdSection">
+                <br>
+                <h1>About</h1>
+                <p>Hello, I'm <strong><i>Sargam Narang</i></strong>, a dedicated individual currently pursuing a Bachelor's degree in Computer Science and Engineering at Chitkara University. My passion lies at the intersection of technology and creativity, where I thrive as  web developer , video editor and graphic designer. As a <strong><i>Web developer</i></strong>, I bring ideas to life through code, creating seamless and interactive online experiences. Simultaneously, my role as a <strong><i>Graphic Designer</i></strong> allows me to weave visual narratives, blending aesthetics with functionality. I am driven by a curiosity to explore innovative solutions and a commitment to refining my skills in both realms. Through my academic journey and professional endeavors, I aim to contribute meaningfully to the ever-evolving landscape of technology and design.Simultaneously ,  I also wear the hat of a passionate <strong><i>video editor</i></strong>. In this role, I meticulously craft visual stories, seamlessly blending footage, sound, and effects to evoke emotions and captivate audiences. From conceptualizing ideas to the final edit, I find joy in transforming raw content into polished, engaging videos. My commitment to precision, coupled with a keen eye for detail, allows me to bring a unique perspective to every project. As I navigate through my academic pursuits, I am excited to continue refining my skills and contributing my creative touch to the world of video production.</p>
+            </div>
+         
+        
+         </section>
+         <hr>
+        
+        <section class="secondSection">
+            <span class="text grey">What I have done so far</span>
+         <h1>Work Experience</h1>
+         <ul>
+            <li><strong>Scientific Exploration and Achievement</strong><br><p>Successfully participated in the VVM, showcasing my passion for knowledge and scientific exploration. Honored to be selected for the state level, where I embraced the opportunity to engage with and contribute to the broader scientific community.</p></li>
+            <hr>
+            <li><strong>Graphic Designing</strong><br><p>Passionate graphic designer adept at transforming ideas into visually compelling narratives. Proficient in Adobe Creative Suite, specializing in clean aesthetics, impactful visuals, and collaborative design. Eager to contribute creativity and expertise to your next project.</p></li>
+            <hr>
+            <li><strong>Continuous Learning Journey: Coursera Courses Completed in First Year</strong><br><p>Enthusiastically completed several Coursera courses during my first year of college, enhancing my knowledge. These experiences have not only deepened my understanding but also instilled a proactive approach to continuous learning.</p>
+
+
+
+
+            </p></li>
+        </ul>
+        </section>
+        <hr>
+        <section class="fourthSection">
+            <span class="text grey">Here we go</span>
+         <h1>Services</h1>
+         <ul>
+            
+            <li>Video Post Production</li>
+            <li>Web Developments</li>
+            <li>Graphic Designing</li>
+            <li>Web Designing</li>
+
+         </ul>
+         </section>
+         <hr>
+         <section class="fifthSection">
+            <span class="text grey"></span>
+         <h1>Projects</h1>
+         <ul>
+            <li><h3>Personal Portfolio Website</h3><br><p>I Developed a responsive portfolio website showcasing my skills, projects, and a brief about myself.</p></li>
+            <li><h3>Calculator</h3><br><p>Developing a user-friendly calculator application with essential functions for efficient arithmetic operations, providing a seamless digital tool for everyday calculations.</p></li>
+            <li><h3>Fitness Tracker</h3><br><p>Develop a simple fitness tracking application where users can log their workouts, set goals, and monitor their progress.</p></li>
+            <li><h3>Currency Convertor</h3><br><p>Build a currency converter app that allows users to convert between different currencies, fetching live exchange rates.</p></li>
+            <hr>
+            <section class="sixthSection">
+                <span class="text grey"></span>
+             <h1>Contact Details</h1>
+             <h5>Contact : 765XXXXXXX</h5>
+             <h5>Email:sargam@gmail.com</h5>
+             <h5>LinkedIn:www.abc</h5>
+                
+                
+             </section>
+             <hr>
+          
+            
+
+         </ul>
+         </section>
+         <hr>
+
+         
+
+
+    </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script>
+        var typed = new Typed('#element', {
+          strings: [ 'Web Developer',' Graphic Designer','Web Designer','Video Editor'],
+          typeSpeed: 50,
+        });
+      </script>
+    
+</body>
+    
+
+</html>
